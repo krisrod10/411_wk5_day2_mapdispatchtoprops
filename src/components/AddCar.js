@@ -31,7 +31,10 @@ class AddCar extends Component {
         delete payload.open
         console.log("THE CAR", payload)
         // add this.props.addCar function here
+        this.props.addCar(payload)
+        this.setState({ open: !this.state.open })
         // also add this.setState to close the dialog
+        this.setState({ open: false })
     }
 
     componentDidUpdate = (prevProps, prevState) => {
